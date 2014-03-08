@@ -1,0 +1,87 @@
+<div class="loginForm">
+
+
+<div class="overlay inactive"></div>
+<div class="all">
+      <div class="logo inactive"></div>
+      <section class="index">
+
+            <div class="welcome">
+                  <h1>Seja bem vindo</h1>
+                  <article>
+                        Você está prestes a acessar uma rede de anuncios de casas, desenvolvida para ajudar as pessoas a encontrar imoveis
+                  </article>
+
+                  <article>
+                        <!-- Todas as denúncias presentes no site foram cadastradas por outros usuários sem intervenção ou censura dos dados, por terceiros. -->
+                  </article>
+
+                  <article>
+                        <!-- Lembre-se que sua denúncia deve ser fiel e compatível aos fatos. -->
+                  </article>
+            </div>
+
+            <div class="selectBox cidade">
+                  <h4>Selecione seu estado seguido da sua cidade</h4>
+
+                  
+  <label class="select">
+    <select name="estado" id="estado">
+      <option value="">Selecione um estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AM">Amazonas</option>
+        <option value="AP">Amapá</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="PR">Paraná</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option></select>
+  </label>
+  <label class="select">
+    <select name="cidade" id="cidade">
+      <option value="-1">Selecione uma cidade</option>
+    </select>
+  </label> 
+
+  <button class="changeCity">Salvar cidade</button>
+
+  
+          </div>
+      </section>
+      <aside>
+        <p class="apoio-link"><a href="http://github.com/ricardomaleixo" target="_blank">Veja como funciona</a>.</p>
+      </aside>
+</div>
+<script>
+      $(document).ready(function(){
+
+            loadInactiveMap();
+
+            new dgCidadesEstados({
+                  estado: $('#estado').get(0),
+                  cidade: $('#cidade').get(0)
+
+            });
+      });
+
+</script>
+<div>
